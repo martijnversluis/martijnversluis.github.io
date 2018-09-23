@@ -1,0 +1,38 @@
+---
+title: Martijn Versluis - web developer
+---
+
+<nav>
+  <ul class="frontpage__tiles">
+    <li class="tile frontpage__picture"></li>
+
+    <% data.sections.each do |section| %>
+      <li class="tile">
+        <div class="tile__inner">
+          <div class="tile__header">
+            <h2 class="tile__title"><%= section['title'] %></h2>
+            <%= image_tag "#{section['icon']}.svg", class: 'tile__icon' %>
+            <p class="tile__content"><%= Kramdown::Document.new(section['content']).to_html %></p>
+          </div>
+
+          <% if section['cta'] && section['cta'].any? %>
+            <ul class="tile__ctas">
+              <% section['cta'].each do |cta| %>
+                <li class="tile__cta">
+                  <a
+                    class="tile__cta-link"
+                    href="<%= cta['url'] %>"
+
+                    <% if cta['url'].match?(/^https?:\/\//) %>
+                      target="_blank"
+                    <% end %>
+                  ><%= cta['text'] %></a>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</nav>
