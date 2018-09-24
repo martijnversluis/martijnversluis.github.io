@@ -10,11 +10,15 @@
   <body>
     <div id="container">
       <header class="header">
-        <h1 class="header__title"> <%= current_page.data.title || 'Middleman' %></h1>
+        <div class="wrapper">
+          <h1 class="header__title"> <%= current_page.data.title || 'Middleman' %></h1>
+        </div>
       </header>
 
       <main>
-        <%= yield %>
+        <div class="wrapper">
+          <%= yield %>
+        </div>
       </main>
     </div>
 

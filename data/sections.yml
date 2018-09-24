@@ -1,15 +1,18 @@
 - title: Profile
   icon: person
-  content: I'm a developer/consultant at Kabisa Amsterdam
+  content: |
+    I'm a developer/consultant at __[Kabisa Amsterdam](https://kabisa.nl){:target='_blank'}__
+
+    I am passionate about craftmanship, TDD/BDD, Scrum, Ruby, Rails, React and more.
   cta:
-  - text: Visit Kabisa online
-    url: https://kabisa.nl
+  - text: Learn more
+    url: /profile
   - text: View my profile on LinkedIn
     url: https://www.linkedin.com/in/martijnversluis1
 - title: Open source
   icon: fork
   content: |
-    I maintain some music related projects:
+    I maintain some __music related projects__:
 
     - [ChordJS](https://github.com/martijnversluis/ChordJS){:target='_blank'}
     - [ChordSheetJS](https://github.com/martijnversluis/ChordSheetJS){:target='_blank'}
@@ -18,9 +21,20 @@
   cta:
   - text: Learn more
     url: /open-source
+  - text: Visit @martijnversluis on GitHub
+    url: https://github.com/martijnversluis
 - title: Content
   icon: book
   content: |
-    Read my article about confidence in software:
-    [English](https://www.theguild.nl/confidence-in-your-software/){:target='_blank'}
-    or [Dutch](https://blog.kabisa.nl/vertrouwen-in-software/){:target='_blank'}
+    Read my article about
+    [Confidence in software](https://www.theguild.nl/confidence-in-your-software/){:target='_blank'} (English) or
+    [Vertrouwen in software](https://blog.kabisa.nl/vertrouwen-in-software/){:target='_blank'} (Dutch)
+- title: Contact
+  icon: chat
+  content: Feel free to __contact__ or visit me online
+  cta:
+  - text: Email me
+    url: mailto:martijnversluis@gmail.com
+  - text: Visit @martijnversluis on Twitter
+    url: https://twitter.com/martijnversluis
+

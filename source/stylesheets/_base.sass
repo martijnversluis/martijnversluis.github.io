@@ -2,10 +2,10 @@
   box-sizing: border-box
 
 body
-  background-color: #e0e0e0
+  background-color: #f2f2f2
   color: #333
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Roboto", "Cantarell", "Oxygen", "Ubuntu", sans-serif
-  padding: 18vh 1rem
+  margin: 0
   text-align: center
 
 a
@@ -15,6 +15,24 @@ a
   &:hover
     text-decoration: none
 
-#container
+.wrapper
   margin: 0 auto
   max-width: 1400px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: inherit
+
+.column-layout
+  display: flex
+
+  &__sidebar
+    flex: 0 0 auto
+    width: 250px
+
+  &__main
+    flex: 1 0 auto

@@ -4,7 +4,7 @@ title: Martijn Versluis - web developer
 
 <nav>
   <ul class="frontpage__tiles">
-    <li class="tile frontpage__picture"></li>
+    <li class="tile picture"></li>
 
     <% data.sections.each do |section| %>
       <li class="tile">
@@ -12,7 +12,7 @@ title: Martijn Versluis - web developer
           <div class="tile__header">
             <h2 class="tile__title"><%= section['title'] %></h2>
             <%= image_tag "#{section['icon']}.svg", class: 'tile__icon' %>
-            <p class="tile__content"><%= Kramdown::Document.new(section['content']).to_html %></p>
+            <div class="tile__content"><%= Kramdown::Document.new(section['content']).to_html %></div>
           </div>
 
           <% if section['cta'] && section['cta'].any? %>
