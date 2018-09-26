@@ -4,7 +4,7 @@
     I'm a developer/consultant at __[Kabisa Amsterdam](https://kabisa.nl){:target='_blank'}__
 
     I am passionate about craftmanship, TDD/BDD, Scrum, Ruby, Rails, React and more.
-  cta:
+  cta_buttons:
   - text: Learn more
     url: /profile
   - text: View my profile on LinkedIn
@@ -18,7 +18,7 @@
     - [ChordSheetJS](https://github.com/martijnversluis/ChordSheetJS){:target='_blank'}
     - [ChordFiddle](https://martijnversluis.github.io/ChordFiddle){:target='_blank'}
       ([on GitHub](https://github.com/martijnversluis/ChordFiddle){:target='_blank'})
-  cta:
+  cta_buttons:
   - text: Learn more
     url: /open-source
   - text: Visit @martijnversluis on GitHub
@@ -32,7 +32,7 @@
 - title: Contact
   icon: chat
   content: Feel free to __contact__ or visit me online
-  cta:
+  cta_buttons:
   - text: Email me
     url: mailto:martijnversluis@gmail.com
   - text: Visit @martijnversluis on Twitter

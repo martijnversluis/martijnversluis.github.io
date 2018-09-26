@@ -6,27 +6,29 @@ title: Martijn Versluis - web developer
   <ul class="frontpage__tiles">
     <li class="tile picture"></li>
 
-    <% data.sections.each do |section| %>
+    <% data  %>
+
+    <% Section.from_data(data.sections).each do |section| %>
       <li class="tile">
         <div class="tile__inner">
           <div class="tile__header">
-            <h2 class="tile__title"><%= section['title'] %></h2>
-            <%= image_tag "#{section['icon']}.svg", class: 'tile__icon' %>
-            <div class="tile__content"><%= Kramdown::Document.new(section['content']).to_html %></div>
+            <h2 class="tile__title"><%= section.title %></h2>
+            <%= image_tag "#{section.icon}.svg", class: 'tile__icon' %>
+            <div class="tile__content"><%= Kramdown::Document.new(section.content).to_html %></div>
           </div>
 
-          <% if section['cta'] && section['cta'].any? %>
+          <% if section.has_cta_buttons? %>
             <ul class="tile__ctas">
-              <% section['cta'].each do |cta| %>
+              <% section.cta_buttons.each do |cta_button| %>
                 <li class="tile__cta">
                   <a
                     class="tile__cta-link"
-                    href="<%= cta['url'] %>"
+                    href="<%= cta_button.url %>"
 
-                    <% if cta['url'].match?(/^https?:\/\//) %>
+                    <% if cta_button.full_url? %>
                       target="_blank"
                     <% end %>
-                  ><%= cta['text'] %></a>
+                  ><%= cta_button.text %></a>
                 </li>
               <% end %>
             </ul>
