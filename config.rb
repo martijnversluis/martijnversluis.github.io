@@ -1,5 +1,8 @@
 Dir["#{__dir__}/lib/**/*.rb"].each { |file| require file }
 
+helpers ApplicationHelpers
+helpers TimelineHelpers
+
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end

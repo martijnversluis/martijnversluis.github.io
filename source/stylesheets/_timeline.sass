@@ -1,0 +1,81 @@
+.timeline
+  $spacing-left: 2.5rem
+  $bullet-size: 0.8rem
+  $bullet-spacing: 0.4rem
+  $bullet-outer-size: $bullet-size + (2 * $bullet-spacing)
+  $line-size: 0.1rem
+  $bullet-transform-x: -1 * ($spacing-left + ($bullet-outer-size / 2))
+
+  padding: 0 $spacing-left
+  text-align: left
+
+  &__entry
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+    &:first-child
+      .timeline__entry__content:before
+        background-color: #fff
+        content: ''
+        display: inline-block
+        height: $bullet-outer-size
+        position: absolute
+        top: 0
+        transform: translate($bullet-transform-x)
+        width: $bullet-outer-size
+
+    &__date
+      flex: 0 0 3.5rem
+      font-weight: 500
+
+    &__content
+      border-left: $line-size #e74c3c solid
+      flex: 1 1 auto
+      padding: 0 0 2rem $spacing-left
+      position: relative
+
+      &:after
+        background-color: #e74c3c
+        border: $bullet-spacing #fff solid
+        border-radius: 50%
+        box-sizing: border-box
+        content: ''
+        display: inline-block
+        height: $bullet-outer-size
+        position: absolute
+        transform: translate($bullet-transform-x, -50%)
+        top: 0.75rem
+        width: $bullet-outer-size
+
+    &__title
+      color: #e74c3c
+      font:
+        size: 1.2rem
+        weight: 600
+      margin-bottom: 1rem
+
+    &__description
+      margin-bottom: 1rem
+
+      h3
+        font-weight: 600
+        margin-bottom: 0.5rem
+
+      p
+        margin-bottom: 1rem
+
+      ul
+        list-style: disc
+        padding-left: 2rem
+
+    &__label
+      background-color: #e74c3c
+      border-radius: 0.3rem
+      color: #fff
+      display: inline-block
+      font:
+        size: 0.8rem
+        weight: 500
+      margin: 0 0.1rem 0.1rem 0
+      padding: 0 0.3rem

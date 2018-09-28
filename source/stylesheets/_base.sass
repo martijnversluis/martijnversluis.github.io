@@ -8,6 +8,9 @@ body
   margin: 0
   text-align: center
 
+main
+  padding: 0.5rem
+
 a
   color: inherit
   text-decoration: underline
@@ -29,10 +32,19 @@ h6
 
 .column-layout
   display: flex
+  flex-wrap: wrap
 
   &__sidebar
-    flex: 0 0 auto
+    flex: 0.1 0 10rem
     width: 250px
 
+    &.picture
+      max-height: 50rem
+      position: sticky
+      top: 1.5rem
+
   &__main
-    flex: 1 0 auto
+    flex: 1 0 20rem
+
+    .tile__inner
+      padding: 4rem

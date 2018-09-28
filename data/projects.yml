@@ -1,0 +1,100 @@
+- company: Kabisa
+  company_url: https://www.kabisa.nl
+  start_year: 2017
+  project: |
+    Kabisa is specialized in developing elegant (enterprise) software solutions using technologies such as
+    Ruby (on Rails), Java, Elixir and Frontend development.At Kabisa a worked on several different projects.
+
+    ### Creative Group
+
+    Creative Group runs several webshops for online and mobile credit. Martijn worked as a full stack Rails developer
+    on the team that develops Recharge.com. He advised on topics like applying Scrum to the day to day development
+    workflow, integrating GraphQL and React into the application, and how to properly setup and maintain automated
+    testing.
+
+  technologies:
+  - Ruby
+  - JavaScript
+  - Ruby on Rails
+  - Spree
+  - GraphQL
+  - React
+  - Middleman
+  - Grape
+
+- company: Ultimaker
+  company_url: https://www.ultimaker.com
+  start_year: 2015
+  project: |
+    Ultimaker is the maker of the Ultimaker 3D printer. Besides developing and producing the printers,
+    Ultimaker develops software to make 3D printing easier, such as the Cura slicing software that translates
+    a 3D model into a printable file format.
+
+    ### YouMagine
+
+    Development on [www.youmagine.com](https://www.youmagine.com){:target='_blank'}, an online community platform
+    for 3D printing enthusiasts. It allows to browse through, collaborate on and download 3D models, and to publish
+    your own designs. Content is made searchable using Apache Solr. Files are stored on Amazon S3.
+
+    ### Printer Management Software
+
+    Development on Ultimaker’s Printer Management Software, a Rails application to control and monitor multiple 3D
+    printers over network. The printers are controlled using the REST API that runs on each printer. Print jobs are
+    stored in a queue and routed to a printer with the right configuration as soon as one is available. Print jobs
+    are monitored using the builtin webcam and temperature sensors. Different types of hardware maintenance tasks
+    are tracked for each printer.
+
+    ### Print Cluster Management
+
+    Development on Ultimaker’s
+    [Cura Connect](https://ultimaker.com/en/products/ultimaker-cura-software/cura-connect){:target='_blank'}, an
+    extension to the printer firmware that adds control over and monitoring of a small group of 3D printers. The
+    printers are controlled using the REST API that runs on each printer. Print jobs are stored in a queue and routed
+    to a printer with the right configuration as soon as one is available.
+
+  technologies:
+  - Ruby
+  - JavaScript
+  - Ruby on Rails
+  - RSpec
+  - ActionCable
+  - Python
+  - Flask
+
+- company: EF2 Doeltreffende communicatie
+  company_url: https://www.ef2.nl
+  start_year: 2012
+  project: |
+    Development of several websites and web applications and integrating other applications through SOAP and REST.
+
+    Some interesting projects:
+
+    - a client portal for an energy supplier, connected to .NET financial software using a custom C# .NET webservice
+    - a client portal for another energy supplier, connected to Microsoft AX using SOAP webservices
+    - a loyalty program for shop keepers featuring a web dashboard for shop keepers, a Phonegap smartphone app for
+      customers, and a cash desk tablet app (also Phonegap)
+
+  technologies:
+  - PHP
+  - JavaScript
+  - CSS
+  - SCSS
+  - C#
+  - Drupal
+  - CakePHP
+  - KnockoutJS
+
+- company: OGD ICT-diensten
+  company_url: https://www.ogd.nl
+  start_year: 2011
+  project: |
+    Development on the corporate social network [www.coconutcenter.com](http://www.coconutcenter.com).
+    It contains modules for communication (chat, forum), subscribing to courses, sharing knowledge and storing
+    and sharing files.
+  technologies:
+  - Ruby
+  - JavaScript
+  - SASS
+  - Ruby on Rails
+  - PrototypeJS
+  - RSpec
