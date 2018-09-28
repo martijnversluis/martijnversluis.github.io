@@ -12,7 +12,9 @@
       <header class="header">
         <div class="wrapper">
           <div class="header__logo">
-            <%= File.read('source/images/terminal.svg') %>
+            <a href="/">
+              <%= File.read('source/images/terminal.svg') %>
+            </a>
           </div>
 
           <h1 class="header__title"> <%= current_page.data.title || 'Middleman' %></h1>
