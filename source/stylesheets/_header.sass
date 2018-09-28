@@ -1,14 +1,30 @@
 .header
+  $logo-size: 5rem
+
   background:
     color: #222
-    image: url('https://c1.staticflickr.com/1/600/21776953612_f2286bb163_k.jpg')
     position: center 30%
     size: cover
   color: #fff
-  padding: 5rem 0 1rem 0
+  padding: 2rem 0 2rem 0
+  position: relative
   text-shadow: #000 1px 0 10px
 
   &__title
     font:
       size: 3rem
-      weight: 100
+      weight: 300
+    padding-left: 8rem
+
+  &__logo
+    left: 1.5rem
+    position: absolute
+    top: 50%
+    transform: translate(0px, -50%)
+
+    svg
+      background-color: #fff
+      border-radius: 0.5rem
+      fill: $color-primary
+      height: $logo-size
+      width: $logo-size

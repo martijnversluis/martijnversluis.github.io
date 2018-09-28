@@ -11,6 +11,10 @@
     <div id="container">
       <header class="header">
         <div class="wrapper">
+          <div class="header__logo">
+            <%= File.read('source/images/terminal.svg') %>
+          </div>
+
           <h1 class="header__title"> <%= current_page.data.title || 'Middleman' %></h1>
         </div>
       </header>
@@ -21,7 +25,5 @@
         </div>
       </main>
     </div>
-
-    <%= javascript_include_tag 'main.bundle' %>
   </body>
 </html>
