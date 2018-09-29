@@ -30,6 +30,10 @@ h5,
 h6
   font-family: inherit
 
+=for-small-screen
+  @media (max-width: 45.25rem)
+    @content
+
 .column-layout
   display: flex
   flex-wrap: wrap
@@ -43,8 +47,14 @@ h6
       position: sticky
       top: 1.5rem
 
+      +for-small-screen
+        display: none
+
   &__main
     flex: 1 0 20rem
 
     .tile__inner
       padding: 4rem
+
+      +for-small-screen
+        padding: 2rem
