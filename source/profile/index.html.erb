@@ -15,7 +15,7 @@ title: Martijn Versluis - profile
             <section class="timeline__entry__content">
               <h2 class="timeline__entry__title">
                 <%= project.company %>
-                (<%= link_to 'website', project.company_url, target: '_blank' %>)
+                (<%= external_link(project.company_url) %>)
               </h2>
 
               <div class="timeline__entry__description">
