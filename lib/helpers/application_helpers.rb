@@ -1,6 +1,12 @@
 module ApplicationHelpers
   FILE_EXTENSION = /\.(\w+)$/
 
+  def image_thumbnail(name, **attributes)
+    link_to image_path(name), attributes.merge(target: '_blank') do
+      image_tag "thumbnails/#{name}", alt: name
+    end
+  end
+
   def main_navigation_item(text, to:)
     content_tag :li, class: 'navigation__item' do
       current_link_to(text, to, { class: 'navigation__link' })

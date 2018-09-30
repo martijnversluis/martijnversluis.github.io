@@ -1,0 +1,14 @@
+- repository: ChordFiddle
+  screenshot: chordfiddle.png
+  description: |
+    ChordFiddle is an online playground for ChordPro chord sheets.
+
+- repository: ChordSheetJS
+  package: chordsheetjs
+  description: |
+    ChordSheetJS is a JavaScript library for parsing and formatting chord sheets.
+
+- repository: ChordJS
+  package: chordjs
+  description: |
+    ChordJS is a simple JavaScript chord parsing and manipulation tool.

@@ -1,6 +1,7 @@
 Dir["#{__dir__}/lib/**/*.rb"].each { |file| require file }
 
 helpers ApplicationHelpers
+helpers BadgeHelpers
 helpers TimelineHelpers
 
 activate :autoprefixer do |prefix|
