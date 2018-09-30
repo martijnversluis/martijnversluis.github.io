@@ -9,15 +9,27 @@
   </head>
   <body>
     <div id="container">
-      <header class="header">
-        <div class="wrapper">
-          <div class="header__logo">
-            <a href="/">
+      <section class="navigation">
+        <div class="wrapper navigation__inner">
+          <div class="navigation__logo">
+            <a href="/" class="navigation__logo__link">
               <%= File.read('source/images/terminal.svg') %>
             </a>
           </div>
 
-          <h1 class="header__title"> <%= current_page.data.title || 'Middleman' %></h1>
+          <nav class="navigation">
+            <ul class="navigation__items">
+              <%= main_navigation_item 'Home', to: '/index.html' %>
+              <%= main_navigation_item 'Profile', to: '/profile/index.html' %>
+              <%= main_navigation_item 'Open source', to: '/open-source/index.html'  %>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <header class="header">
+        <div class="wrapper">
+          <h1 class="header__title"> <%= current_page.data.title || 'Martijn Versluis' %></h1>
         </div>
       </header>
 
