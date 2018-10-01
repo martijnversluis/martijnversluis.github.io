@@ -14,7 +14,7 @@ title: Martijn Versluis - open source
               <% end %>
 
               <h3 class="article__title"><%= open_source_project.repository %></h3>
-              <div class="article__description"><%= render_markdown(open_source_project.description) %></div>
+              <div class="rich-text article__description"><%= render_markdown(open_source_project.description) %></div>
 
               <ul class="article__badges">
                 <li class="article__badge"><%= github_badge(open_source_project) %></li>
