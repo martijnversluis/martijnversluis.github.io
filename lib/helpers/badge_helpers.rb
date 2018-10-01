@@ -1,8 +1,11 @@
 module BadgeHelpers
-  def github_badge(open_source_project)
-    badge url: "https://www.github.com/martijnversluis/#{open_source_project.repository}",
-          image: "https://img.shields.io/badge/GitHub-#{open_source_project.repository}-brightgreen.svg",
-          alt: "GitHub repository"
+  def github_link(open_source_project, **attributes)
+    link_to(
+      "View #{open_source_project.repository} on GitHub",
+      "https://www.github.com/martijnversluis/#{open_source_project.repository}",
+      target: '_blank',
+      **attributes
+    )
   end
 
   def code_climate_badge(open_source_project)

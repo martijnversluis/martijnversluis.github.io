@@ -24,8 +24,27 @@
   &__description
     margin-bottom: 1rem
 
+  &__badges
+    height: 20px
+
   &__badge
     display: inline-block
+    font-size: 0
+    height: inherit
+
+    a
+      display: inline-block
+      height: inherit
 
     & + &
       margin-left: 0.5rem
+
+  &__actions
+    align-items: flex-end
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: -1rem
+
+    & > *
+      margin-top: 1rem

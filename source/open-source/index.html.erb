@@ -9,22 +9,28 @@ title: Martijn Versluis - open source
         <div class="tile">
           <div class="tile__inner">
             <article class="article">
+              <h3 class="article__title"><%= open_source_project.repository %></h3>
+
               <% if open_source_project.has_screenshot? %>
                 <%= image_thumbnail(open_source_project.screenshot, class: 'article__screenshot') %>
               <% end %>
 
-              <h3 class="article__title"><%= open_source_project.repository %></h3>
               <div class="rich-text article__description"><%= render_markdown(open_source_project.description) %></div>
 
-              <ul class="article__badges">
-                <li class="article__badge"><%= github_badge(open_source_project) %></li>
-                <li class="article__badge"><%= code_climate_badge(open_source_project) %></li>
-                <li class="article__badge"><%= travis_status_badge(open_source_project) %></li>
+              <div class="article__actions">
+                <ul class="tile__ctas">
+                  <li class="tile__cta"><%= github_link(open_source_project, class: 'tile__cta-link') %></li>
+                </ul>
 
-                <% if open_source_project.has_package? %>
-                  <li class="article__badge"><%= npm_badge(open_source_project) %></li>
-                <% end %>
-              </ul>
+                <ul class="article__badges">
+                  <li class="article__badge"><%= code_climate_badge(open_source_project) %></li>
+                  <li class="article__badge"><%= travis_status_badge(open_source_project) %></li>
+
+                  <% if open_source_project.has_package? %>
+                    <li class="article__badge"><%= npm_badge(open_source_project) %></li>
+                  <% end %>
+                </ul>
+              </div>
             </article>
           </div>
         </div>

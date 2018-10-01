@@ -1,14 +1,23 @@
 - repository: ChordFiddle
   screenshot: chordfiddle.png
   description: |
-    ChordFiddle is an online playground for ChordPro chord sheets.
+    ChordFiddle is an online playground for ChordPro chord sheets. It currently supports:
+
+    - editing your ChordPro file
+    - translating to normal chord sheets
+    - importing a normal chord sheet and have it converted to ChordPro
+    - transposing the ChordPro sheet up and down (complete sheet or selection)
+    - switching between sharp (♯) and flat (♭) chords (complete sheet or selection)
+    - sharing your chord sheet by copy-pasting the automatically generated URL
 
 - repository: ChordSheetJS
   package: chordsheetjs
   description: |
-    ChordSheetJS is a JavaScript library for parsing and formatting chord sheets.
+    ChordSheetJS is a JavaScript library for parsing and formatting chord sheets. ChordPro sheets and chord sheets can
+    be parsed. Parsed songs can be formatted to normal chord sheets, ChordPro sheet and HTML chord sheets.
 
 - repository: ChordJS
   package: chordjs
   description: |
-    ChordJS is a simple JavaScript chord parsing and manipulation tool.
+    ChordJS is a simple JavaScript chord parsing and manipulation tool. It allows to parse a chord, transpose, switch
+    between sharp (♯) and flat (♭) and convert back to a string.
