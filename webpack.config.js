@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 const Clean = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -52,9 +53,9 @@ module.exports = {
   },
 
   plugins: [
-    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
-    // inside your code for any environment checks; UglifyJS will automatically
-    // drop any unreachable code.
+    new ManifestPlugin({
+      fileName: 'rev-manifest.json'
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -62,9 +63,7 @@ module.exports = {
     }),
     new Clean(['.tmp']),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? 'stylesheets/[name].css' : 'stylesheets/[name].[hash].css',
+      filename: devMode ? 'stylesheets/[name].css' : `stylesheets/[name].[hash].css`,
       chunkFilename: devMode ? 'stylesheets/[id].css' : 'stylesheets/[id].[hash].css',
     }),
   ],
