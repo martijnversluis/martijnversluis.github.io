@@ -10,7 +10,19 @@
   text-align: left
 
   +for-small-screen
-    padding: 0 1rem
+    $sm-spacing-left: 1.0rem
+    $sm-bullet-transform-x: -1 * ($sm-spacing-left + ($bullet-outer-size / 2))
+
+    padding: 0 $sm-spacing-left
+
+    .timeline__entry:first-child .timeline__entry-content:before
+      transform: translate($sm-bullet-transform-x, 0)
+
+    .timeline__entry-content
+      padding: 0 0 2rem $sm-spacing-left
+
+      &:after
+        transform: translate($sm-bullet-transform-x, -50%)
 
   &__entry
     display: flex
@@ -19,63 +31,63 @@
     position: relative
 
     &:first-child
-      .timeline__entry__content:before
+      .timeline__entry-content:before
         background-color: #fff
         content: ''
         display: inline-block
         height: $bullet-outer-size
         position: absolute
         top: 0
-        transform: translate($bullet-transform-x)
+        transform: translate($bullet-transform-x, 0)
         width: $bullet-outer-size
 
-    &__date
-      flex: 0 0 3.5rem
-      font-weight: 500
-      height: 1.5rem
-      position: sticky
-      top: 1.5rem
+  &__entry-date
+    flex: 0 0 3.5rem
+    font-weight: 500
+    height: 1.5rem
+    position: sticky
+    top: 1.5rem
 
-    &__content
-      border-left: $line-size $color-primary solid
-      flex: 1 1 auto
-      padding: 0 0 2rem $spacing-left
-      position: relative
+  &__entry-content
+    border-left: $line-size $color-primary solid
+    flex: 1 1 auto
+    padding: 0 0 2rem $spacing-left
+    position: relative
 
-      &:after
-        background-color: $color-primary
-        border: $bullet-spacing #fff solid
-        border-radius: 50%
-        box-sizing: border-box
-        content: ''
-        display: inline-block
-        height: $bullet-outer-size
-        position: absolute
-        transform: translate($bullet-transform-x, -50%)
-        top: 0.75rem
-        width: $bullet-outer-size
-
-    &__title
-      color: $color-primary
-      font:
-        size: 1.2rem
-        weight: 600
-      margin-bottom: 1rem
-
-    &__description
-      margin-bottom: 1rem
-
-      h3
-        font-weight: 600
-        margin-bottom: 0.5rem
-
-    &__label
+    &:after
       background-color: $color-primary
-      border-radius: 0.3rem
-      color: #fff
+      border: $bullet-spacing #fff solid
+      border-radius: 50%
+      box-sizing: border-box
+      content: ''
       display: inline-block
-      font:
-        size: 0.8rem
-        weight: 500
-      margin: 0 0.1rem 0.2rem 0
-      padding: 0 0.3rem
+      height: $bullet-outer-size
+      position: absolute
+      transform: translate($bullet-transform-x, -50%)
+      top: 0.75rem
+      width: $bullet-outer-size
+
+  &__entry-title
+    color: $color-primary
+    font:
+      size: 1.2rem
+      weight: 600
+    margin-bottom: 1rem
+
+  &__entry-description
+    margin-bottom: 1rem
+
+    h3
+      font-weight: 600
+      margin-bottom: 0.5rem
+
+  &__entry-label
+    background-color: $color-primary
+    border-radius: 0.3rem
+    color: #fff
+    display: inline-block
+    font:
+      size: 0.8rem
+      weight: 500
+    margin: 0 0.1rem 0.2rem 0
+    padding: 0 0.3rem

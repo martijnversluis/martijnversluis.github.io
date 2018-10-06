@@ -39,6 +39,8 @@ module ApplicationHelpers
   end
 
   def webpack_asset_path(path)
+    return path if config[:environment] == :development
+
     return "webpack_build_disabled_in_tests" if config[:environment] == :test
     rev_manifest = JSON.parse(File.read(REV_MANIFEST_PATH)) if File.exist?(REV_MANIFEST_PATH)
     raise "#{REV_MANIFEST_PATH} is missing." unless rev_manifest
