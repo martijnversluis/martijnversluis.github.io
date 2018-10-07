@@ -3,38 +3,39 @@ title: Martijn Versluis - open source
 ---
 
 <div class="column-layout">
-  <div class="column-layout__sidebar tile picture"></div>
-    <section class="column-layout__main">
-      <% OpenSourceProject.from_data(data.open_source_projects).each do |open_source_project| %>
-        <div class="tile">
-          <div class="tile__inner">
-            <article class="article">
-              <h3 class="article__title"><%= open_source_project.repository %></h3>
-
-              <% if open_source_project.has_screenshot? %>
-                <%= image_thumbnail(open_source_project.screenshot, class: 'article__screenshot') %>
-              <% end %>
-
-              <div class="rich-text article__description"><%= render_markdown(open_source_project.description) %></div>
-
-              <div class="article__actions">
-                <ul class="tile__ctas">
-                  <li class="tile__cta"><%= github_link(open_source_project, class: 'tile__cta-link') %></li>
-                </ul>
-
-                <ul class="article__badges">
-                  <li class="article__badge"><%= code_climate_badge(open_source_project) %></li>
-                  <li class="article__badge"><%= travis_status_badge(open_source_project) %></li>
-
-                  <% if open_source_project.has_package? %>
-                    <li class="article__badge"><%= npm_badge(open_source_project) %></li>
-                  <% end %>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      <% end %>
-    </section>
+  <div class="column-layout__sidebar tile picture">
+    <%= image_tag 'martijn.png' %>
   </div>
+  <section class="column-layout__main">
+    <% OpenSourceProject.from_data(data.open_source_projects).each do |open_source_project| %>
+      <div class="tile">
+        <div class="tile__inner">
+          <article class="article">
+            <h3 class="article__title"><%= open_source_project.repository %></h3>
+
+            <% if open_source_project.has_screenshot? %>
+              <%= image_thumbnail(open_source_project.screenshot, class: 'article__screenshot') %>
+            <% end %>
+
+            <div class="rich-text article__description"><%= render_markdown(open_source_project.description) %></div>
+
+            <div class="article__actions">
+              <ul class="tile__ctas">
+                <li class="tile__cta"><%= github_link(open_source_project, class: 'tile__cta-link') %></li>
+              </ul>
+
+              <ul class="article__badges">
+                <li class="article__badge"><%= code_climate_badge(open_source_project) %></li>
+                <li class="article__badge"><%= travis_status_badge(open_source_project) %></li>
+
+                <% if open_source_project.has_package? %>
+                  <li class="article__badge"><%= npm_badge(open_source_project) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    <% end %>
+  </section>
 </div>

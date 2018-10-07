@@ -4,7 +4,9 @@ title: Martijn Versluis - web developer
 
 <nav>
   <ul class="frontpage__tiles">
-    <li class="tile picture"></li>
+    <li class="tile picture">
+      <%= image_tag 'martijn.png' %>
+    </li>
 
     <% Section.from_data(data.sections).each do |section| %>
       <li class="tile">
