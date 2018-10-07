@@ -14,13 +14,13 @@ title: Martijn Versluis - profile
           <li class="timeline__entry">
             <time class="timeline__entry-date"><%= project.start_year %></time>
 
-            <section class="rich-text timeline__entry-content">
+            <section class="timeline__entry-content">
               <h2 class="timeline__entry-title">
                 <%= project.company %>
                 (<%= external_link(project.company_url) %>)
               </h2>
 
-              <div class="timeline__entry-description">
+              <div class="rich-text timeline__entry-description">
                 <%= render_markdown(project.project) %>
               </div>
 
