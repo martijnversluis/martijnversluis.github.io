@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'kramdown', '~> 1.17'
 gem 'middleman', '~> 4.2'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-autoprefixer', '~> 2.10'
 gem 'middleman-livereload', '~> 3.4'
 gem 'rake', '~> 12.3'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
