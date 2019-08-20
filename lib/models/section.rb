@@ -1,3 +1,5 @@
+require_relative 'cta_button'
+
 class Section < Model
   attributes :title, :icon, :content
   has_many :cta_buttons, model: CtaButton
