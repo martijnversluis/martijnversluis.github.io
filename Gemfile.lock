@@ -111,7 +111,7 @@ GEM
     rack-livereload (0.3.17)
       rack
     rainbow (3.0.0)
-    rake (12.3.3)
+    rake (13.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -158,7 +158,7 @@ DEPENDENCIES
   middleman-autoprefixer (~> 2.10)
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload (~> 3.4)
-  rake (~> 12.3)
+  rake (~> 13.0)
   rspec
   rubocop
   tzinfo-data
