@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'kramdown', '~> 1.17'
-gem 'middleman', '~> 4.2'
+gem 'middleman', '~> 4.3'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-autoprefixer', '~> 2.10'
 gem 'middleman-livereload', '~> 3.4'
