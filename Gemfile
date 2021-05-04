@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'kramdown', '~> 1.17'
-gem 'middleman', '~> 4.3'
+gem 'kramdown'
+gem 'middleman', github: 'middleman/middleman'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
-gem 'middleman-autoprefixer', '~> 2.10'
-gem 'middleman-livereload', '~> 3.4'
-gem 'rake', '~> 13.0'
+gem 'middleman-autoprefixer'
+gem 'middleman-livereload'
+gem 'rake'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
-gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
+gem 'wdm', platforms: [:mswin, :mingw]
 
 group :development do
   gem 'rubocop'
