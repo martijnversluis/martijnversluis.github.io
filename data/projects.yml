@@ -12,6 +12,11 @@
     workflow, integrating GraphQL and React into the application, and how to properly setup and maintain automated
     testing.
 
+    ### Backbase
+
+    Backbase delivers banking software to financial institutes worldwide. Martijn worked on a pipeline that converts
+    AsciiDoc documentation files into HTML pages and publishes the content on the online Backbase community platform
+
   technologies:
   - Ruby
   - JavaScript
