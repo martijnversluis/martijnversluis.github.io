@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: dc1b2e8e5959667d9312b0ac5c30b9e980141856
+  revision: d60a42a4b1af3224405b68fbca22c7eac8f6ba79
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -64,9 +64,9 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
-    execjs (2.8.1)
+    execjs (2.7.0)
     fastimage (2.2.3)
-    ffi (1.15.0)
+    ffi (1.15.1)
     fuubar (2.5.1)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -111,7 +111,7 @@ GEM
     parallel (1.20.1)
     parser (3.0.1.1)
       ast (~> 2.4.1)
-    parslet (1.8.2)
+    parslet (2.0.0)
     ptools (1.4.2)
     public_suffix (4.0.6)
     rack (2.2.3)
@@ -161,8 +161,8 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    toml (0.2.0)
-      parslet (~> 1.8.0)
+    toml (0.3.0)
+      parslet (>= 1.8.0, < 3.0.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
